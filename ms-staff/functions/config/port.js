@@ -1,0 +1,6 @@
+module.exports = {
+	MEMBER: 10000,
+	STAFF: 11000,
+	WEATHER: 12000,
+	VEGETABLE: 13000,
+}
