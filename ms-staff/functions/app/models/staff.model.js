@@ -38,10 +38,20 @@ module.exports.sign_in_staff_query = async (body) => {
           $and: [
             {
               username: body.username,
-            },
-          ],
-        },
-      });
+            }
+          ]
+        }
+      },
+        {
+          $project: {
+            first_name: '$first_name',
+            last_name: '$last_name',
+            username: '$username',
+            email: '$email',
+            tel: '$tel'
+
+          }
+        });
     } catch (e) {
       resolve(e);
     }
