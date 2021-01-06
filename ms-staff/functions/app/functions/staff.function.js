@@ -41,7 +41,7 @@ module.exports.insert_staff = (request) => {
         // eslint-disable-next-line prefer-promise-reject-errors
         reject({
           statusCode: status_code.staff.staff_insert_fail.code,
-          statusText: JSON.stringify(e, null, '\t'),
+          statusText: e,
         });
       }
     }
@@ -88,7 +88,7 @@ module.exports.sign_in_staff = (request) => {
       // eslint-disable-next-line prefer-promise-reject-errors
       reject({
         statusCode: status_code.staff.staff_sign_in_fail.code,
-        statusText: JSON.stringify(e, null, '\t'),
+        statusText: e,
       });
     }
   });

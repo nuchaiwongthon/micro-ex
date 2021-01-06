@@ -56,7 +56,7 @@ module.exports.sign_up_member = (request) => {
         // eslint-disable-next-line prefer-promise-reject-errors
         reject({
           statusCode: status_code.member.member_insert_fail.code,
-          statusText: JSON.stringify(e, null, '\t'),
+          statusText: e,
         });
       }
     }
@@ -102,7 +102,7 @@ module.exports.sign_in_member = (request) => {
       // eslint-disable-next-line prefer-promise-reject-errors
       reject({
         statusCode: status_code.member.member_sign_in_fail.code,
-        statusText: JSON.stringify(e, null, '\t'),
+        statusText: e,
       });
     }
   });
